@@ -3,15 +3,15 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AutomationPracticeForm {
     public static void main(String[] args) {
         // Set system property for ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Vlad\\Documents\\geckodriver.exe");
 
         // Instantiate a ChromeDriver object
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
 
         // Navigate to the website
         driver.get("https://demoqa.com/automation-practice-form");
@@ -27,8 +27,8 @@ public class AutomationPracticeForm {
         emailField.sendKeys("test@test.test");
 
         // Find and select the Male radio button for Gender
-        WebElement maleRadioButton = driver.findElement(By.id("gender-radio-1"));
-        maleRadioButton.click();
+//        WebElement maleRadioButton = driver.findElement(By.id("gender-radio-1"));
+//        maleRadioButton.click();
 
         // Find and fill the Mobile field
         WebElement mobileField = driver.findElement(By.id("userNumber"));
